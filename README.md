@@ -99,8 +99,6 @@ This pipeline aims to refine overlapping structural variants (SVs) into more gra
 </p>
 <p align="center"><b>Figure 10:</b> Example of D-matrix generation</p>
 
-- Extract `diff_array` from `merged_results.csv`.
-- Each SV is expressed as a linear combination of rSVs.
 
 #### **X Matrix: Mapping between SVs and Sample Genotypes**
 <p align="center">
