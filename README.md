@@ -1,8 +1,10 @@
 ## 🎯 rSV Pipeline Overview
 
 ### 🏗 Primary Objectives
+
 <p align="center">
 <img src="https://github.com/user-attachments/assets/69c43992-af28-4669-a35e-198771986241" width="800">
+<img src="https://github.com/user-attachments/assets/2723d4ab-a397-46e8-aa4f-af0729e5a06d" width="800">
 </p>
 <p align="center"><b>Figure 1:</b> Schematic overview of the main objective</p>
 
@@ -49,7 +51,7 @@ This pipeline aims to refine overlapping structural variants (SVs) into more gra
 
 ### General Workflow
 <p align="center">
-<img src="https://github.com/user-attachments/assets/544c06a0-1415-4518-92d3-73485fcbbe06" width="900">
+<img src="https://github.com/user-attachments/assets/cefcb5a0-8f41-4aa4-9fce-625a9b18bcd9" width="900">
 </p>
 <p align="center"><b>Figure 5:</b> Overview of the rSV generation process</p>
 
