@@ -117,7 +117,7 @@ This pipeline aims to refine overlapping structural variants (SVs) into more gra
 </p>
 <p align="center"><b>Figure 12:</b> Example of T-matrix generation</p>
 
-- Computed as T = D × X<sup>2</sup>
+- Computed as T = D<sup>T</sup>X
 - The resulting `GT-matrix` conforms to VCF v4.2 genotype format.
 
 ---
