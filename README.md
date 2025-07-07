@@ -67,11 +67,9 @@ This pipeline aims to refine overlapping structural variants (SVs) into more gra
 
 ### Case 2: Complex Cases (Presence of poly-ins with low overlap)
 <p align="center">
-<img src="https://github.com/user-attachments/assets/faa5ff4a-2b47-4a7c-93bd-e7991dd318c2" width="600">
+<img src="https://github.com/user-attachments/assets/3ebd220f-9e6e-4ffd-bb7f-9361c0b6c0eb" width="600">
 </p>
 <p align="center"><b>Figure 7:</b> rSV generation in presence of poly-ins</p>
-
-- If `poly-alt` events are present but do not meet the overlap threshold, the variants are recorded in `nrSV_meta.csv` and eventually incorporated into `nSV.vcf`.
 
 ---
 
