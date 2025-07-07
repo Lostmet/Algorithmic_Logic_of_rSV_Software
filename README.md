@@ -65,7 +65,7 @@ This pipeline aims to refine overlapping structural variants (SVs) into more gra
    - Mismatch → label `diff = 1`
 3. Compute the `diff_array` and merge adjacent positions to generate `rSV_meta`.
 
-### Case 2: Complex Cases (Presence of poly-ins with low overlap)
+### Case 2: Complex Cases
 <p align="center">
 <img src="https://github.com/user-attachments/assets/3ebd220f-9e6e-4ffd-bb7f-9361c0b6c0eb" width="600">
 </p>
