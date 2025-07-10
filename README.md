@@ -50,22 +50,30 @@ This pipeline aims to refine overlapping structural variants (SVs) into more gra
 ## [Step 3] rSV Generation
 
 ### General Workflow
+
 <p align="center">
-<img src="https://github.com/user-attachments/assets/cefcb5a0-8f41-4aa4-9fce-625a9b18bcd9" width="900">
+<img src="https://github.com/user-attachments/assets/5f1f14c8-58d6-4858-8a95-b2ffe0527d77" width="900">
 </p>
 <p align="center"><b>Figure 5:</b> Overview of the rSV generation process</p>
 
 ### Case 1: Standard Cases (No poly-ins)
+
 <p align="center">
-<img src="https://github.com/user-attachments/assets/8817adcd-63d3-41e9-91bb-2990bdb6e07d" width="600">
+<img src="https://github.com/user-attachments/assets/e055fd41-472d-4bfb-8375-8669d6557b02" width="600">
 </p>
 <p align="center"><b>Figure 6:</b> rSV generation without poly-ins</p>
 
-1. Slide a fixed-size window across aligned sequences.
-2. Compare variant alleles (`del`, `ins`) against reference:
-   - Match → label `diff = 0`
-   - Mismatch → label `diff = 1`
-3. Compute the `diff_array` and merge adjacent positions to generate `rSV_meta`.
+1. **Encode the alignment result:**
+   - A, T, C, G → encoded as `1, 2, 3, 4`
+   - Gap placeholder `"-"` → encoded as `0`
+
+2. **Process encoded columns:**
+   - For each column, compare its `rank` with the previous column.
+   - If `rank == 1`, merge with the previous block.
+   - If `rank != 1`, start a new block.
+
+3. **Compare each merged block with the reference sequence:**
+   - Record differences and generate `rSV_meta` based on the merged blocks.
 
 ### Case 2: Complex Cases
 <p align="center">
