@@ -13,16 +13,17 @@ This pipeline aims to refine overlapping structural variants (SVs) into more gra
 ---
 
 ## [Step 1] VCF Preprocessing and FASTA Generation
+
 <p align="center">
-<img src="https://github.com/user-attachments/assets/40ad6400-d640-4518-8775-644a6d93972f" width="500">
+<img src="https://github.com/user-attachments/assets/e84b07b1-d4e3-44ba-9cc4-f9a38bddc5b0" width="500">
 </p>
 <p align="center"><b>Figure 2:</b> Workflow for processing VCF files and generating FASTA</p>
 
 **Workflow Summary**:
-- Include `INV` (inversion) events in `nSV.vcf`.
+- Include complex events in `nSV.vcf`.
 - Determine SV overlaps:
   - **Non-overlapping** → Store in `single_group`, generate individual VCF using `filter_vcf`.
-  - **Overlapping** → Store in `multi_group`, perform `pre-align` via `pos`, then export as `variants_pre_aligned.fasta` for downstream processing.
+  - **Overlapping** → Store in `multi_group`, perform `pre-align` via `pos`, then export as `variants_pre_aligned.fasta` for downstream processing. (delete after processing)
 
 ---
 
@@ -57,7 +58,7 @@ This pipeline aims to refine overlapping structural variants (SVs) into more gra
 <p align="center"><b>Figure 5:</b> Overview of the rSV generation process</p>
 
 ### Case 1: Standard Cases (No poly-ins)
-
+> poly-ins means group has insertions with the same position
 <p align="center">
 <img src="https://github.com/user-attachments/assets/e055fd41-472d-4bfb-8375-8669d6557b02" width="600">
 </p>
@@ -87,7 +88,7 @@ This pipeline aims to refine overlapping structural variants (SVs) into more gra
 
 ### Overall Workflow
 <p align="center">
-<img src="https://github.com/user-attachments/assets/c1bf08e0-8566-4f56-ac8e-5d087b3e79b0" width="1200">
+<img src="https://github.com/user-attachments/assets/9ca1a21a-9b0e-433d-a4c9-9974fd1193a5" width="1200">
 </p>
 <p align="center"><b>Figure 8:</b> Full pipeline of Step 4</p>
 
@@ -115,7 +116,7 @@ This pipeline aims to refine overlapping structural variants (SVs) into more gra
 <p align="center"><b>Figure 11:</b> Example of X-matrix generation</p>
 
 - Extract genotype (`GT`) data from the VCF corresponding to each SV.
-- Missing values (`./.`) are encoded as `-999` (customizable).
+- Missing values (`./.`) are encoded as `-999` (customizable), and displayed as -9 in pictures.
 
 #### **T Matrix: Mapping between rSVs and Sample Genotypes**
 <p align="center">
